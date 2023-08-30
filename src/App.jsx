@@ -1,16 +1,11 @@
-import { Route, Routes } from 'react-router-dom';
-import NavBar from './Components/Nav';
-import Presentation from './Components/Presentation';
-
-
+import { NavLink } from "react-router-dom";
 function App() {
   return (
     <div className="app">
-      <Routes>
-        <Route  element={<NavBar />} >
-        <Route path="/" element={<Presentation/>} />
-        </Route>
-      </Routes>
+      <h1>Home Page</h1>
+      <ul>
+        <li><NavLink to="/presentation"> Presentations</NavLink></li>
+      </ul>
     </div>
   );
 }
